@@ -20,5 +20,7 @@ int main(){
     int base = pow(10, d - 1);
     int result = (n / base) + 9 * (d - 1);
     cout << result << endl;
-    }
+
+  }
+
 }
