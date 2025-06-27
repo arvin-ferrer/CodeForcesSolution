@@ -1,0 +1,9 @@
+
+
+
+arr1 = [1 2 3 4 5 6] min = 1 
+arr2 = [2 4 5 7 8 9] min = 4 
+arr3 = [7 8 9 5 4] min =  7
+
+if (len(arr) == 2)
+  move max element to the one array with the minimum min element
