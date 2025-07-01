@@ -21,7 +21,7 @@ void solve(){
     if (c0 == '0') c0++;
     else c1++;
   }
-   int mn = max(c0, c1) - n / 2;
+    int mn = max(c0, c1) - n / 2;
     int mx = c0 / 2 + c1 / 2;
     if(k >= mn && (k - mn) % 2 == 0 && k <= mx) cout << "YES";
     else cout << "NO";
