@@ -6,10 +6,10 @@
 
 using namespace std;
 typedef long long ll;
-typedef string s;
 typedef vector <ll> vll;
 typedef vector<int> vi;
 typedef unordered_map<int, int> u_map;
+typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
 
