@@ -20,7 +20,7 @@ void solve(){
     cin >> arr[i];
     sm+=arr[i];
   }
-
+  
   sort(arr.begin(), arr.end());
   arr[n-1]--;
   sort(arr.begin(), arr.end());
