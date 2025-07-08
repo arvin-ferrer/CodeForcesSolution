@@ -14,16 +14,14 @@ typedef unordered_map<int, int> u_map;
 void solve(){
   ll n;
   cin >> n;
-  if (n % 2 != 0 || n == 2){
+  if (n < 4){
     cout << -1 << endl;
   }
-  else {
-    if (n == 4){
-      cout << 1 << " " << 1 << endl;
-    }
-    else{
-      cout << n/6 << " " << n/4 << endl;
-    }
+  else if (n % 2 != 0 && n % 3 != 0){
+    cout << -1 << endl;
+  }
+  else{
+    cout << floor(n/2) << ' ' << floor(n/3) << endl;
   }
 }
 
