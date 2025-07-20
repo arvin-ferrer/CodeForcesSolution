@@ -24,6 +24,7 @@ void solve(){
       cout << i << ' ' << i+1 << ' ' << i+2 << endl;
       good = true;
       break;
+
     }
   }
   if (!good) cout << "NO\n";
