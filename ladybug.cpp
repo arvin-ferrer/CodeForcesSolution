@@ -4,6 +4,11 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+    //1 3 5 8 13
+    //(1, 3)
+    //(5, 8)
+    //(13, 14)
+    //2 5 6 9
 
     int t; 
     cin >> t;
