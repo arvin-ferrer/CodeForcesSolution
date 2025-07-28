@@ -12,7 +12,16 @@ typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
-
+  int a, b, c;
+  cin >> a >> b >> c;
+  b = b*2;
+  c = c*3;
+  if ((a+b+c) % 2 == 0){
+    cout << 0 << endl;
+  }
+  else{
+    cout << 1 << endl;
+  }
 }
 
 int main(){

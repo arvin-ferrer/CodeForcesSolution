@@ -12,17 +12,23 @@ typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
-
+  vi a;
+  int x;
+  while(cin >> x){
+    a.push_back(x);
+  }
+  for (int i: a) cout << i << ' ';
+  cout << '\n';
 }
 
 int main(){
   ios_base::sync_with_stdio(false);
   cin.tie(0);
-  int t;
-  cin >> t;
-  while(t--){
-   solve();
-  }
-  //solve();
+  // int t;
+  // cin >> t;
+  // while(t--){
+  //  solve();
+  // }
+  solve();
 
 }

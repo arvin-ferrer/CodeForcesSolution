@@ -12,7 +12,11 @@ typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
-
+  int n;
+  string s;
+  cin >> n >> s;
+  //rprarlap
+  //
 }
 
 int main(){
