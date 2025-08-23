@@ -12,12 +12,22 @@ typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
-  //FFT or NTT
-  string s;
-  cin >> s;
-  sort(s.begin(), s.end(), greater<>());
-  //TTTNFFFF
-  cout << s << endl;
+	int n;
+	//0 0 0 0
+	//1 0 0 1 for every i=0, j=i+3
+	//+2 at first then 
+	//1 0 1 = 2 + 
+	//l = 0, r = 2
+	if (n <= 3) cout << n << endl;
+	else{
+		//0 0 0 0
+		//1 0 0 1 0 0 1
+		int count = 0;
+		for (int i = 0; i <= n; i+=3){
+			count++;
+		}
+		cout << count << endl;
+	}
 }
 
 int main(){
@@ -28,6 +38,6 @@ int main(){
   while(t--){
    solve();
   }
-
+  //solve();
 
 }

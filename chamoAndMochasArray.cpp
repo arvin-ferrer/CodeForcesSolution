@@ -15,32 +15,22 @@ void solve(){
   int n;
   cin >> n;
   vi a(n);
-  for (int &i :a){
-    cin >> i;
+  for (int &i : a) cin >> i;
+  // sort(a.begin(), a.end());
+  if (n == 2){
+    cout << min(a[0], a[1]) << endl;
+    return;
   }
-  ll odd = 0;
-  ll even = 0;
-  bool allneg = true;
- 
-  for (int i = 0; i < n; i++){
-    if (a[i] > 0) allneg= false;
-    if (i % 2 == 0){
-      even += max(a[i], 0);
+  else{
+    int mx = min(a[0], a[1]);
+    for (int i = 0; i <= n - 3; i++) {
+        vi tmp = {a[i], a[i + 1], a[i + 2]};
+        sort(tmp.begin(), tmp.end());
+        mx = max(mx, tmp[1]);  // median
     }
-    else{
-      odd += max(a[i], 0);
-    }
-  }
-  if (allneg){
-    int mx = *max_element(a.begin(), a.end());
     cout << mx << endl;
   }
-
-  else{
-    cout << max(odd, even) << endl;
-  }
-
-
+  // cout << a[n-2] << endl;
 }
 
 int main(){
@@ -51,6 +41,6 @@ int main(){
   while(t--){
    solve();
   }
-
+  //solve();
 
 }

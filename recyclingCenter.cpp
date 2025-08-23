@@ -12,35 +12,24 @@ typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
-  int n;
-  cin >> n;
+  int n, c;
+  cin >> n >> c;
   vi a(n);
-  for (int &i :a){
-    cin >> i;
-  }
-  ll odd = 0;
-  ll even = 0;
-  bool allneg = true;
- 
+  //5 10
+  //10 4 15 1 8
+  //1 4 8 10 15
+  //15 10 8 4 1
+  //+1 d1 a[i] * pow(2, d1) 
+  for (int &i: a) cin >> i;
+  sort(a.begin(), a.end(), greater<>());
+  int count = 0;
+  int destroyed = 0;
   for (int i = 0; i < n; i++){
-    if (a[i] > 0) allneg= false;
-    if (i % 2 == 0){
-      even += max(a[i], 0);
-    }
-    else{
-      odd += max(a[i], 0);
-    }
+    int cur = a[i] * pow(2, destroyed);
+    if (cur > c) count++;
+    else if (a[i] <= c) destroyed++;
   }
-  if (allneg){
-    int mx = *max_element(a.begin(), a.end());
-    cout << mx << endl;
-  }
-
-  else{
-    cout << max(odd, even) << endl;
-  }
-
-
+  cout << count << endl;
 }
 
 int main(){
@@ -51,6 +40,6 @@ int main(){
   while(t--){
    solve();
   }
-
+  //solve();
 
 }

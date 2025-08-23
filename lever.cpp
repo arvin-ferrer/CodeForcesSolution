@@ -1,8 +1,14 @@
 /*
   Created by: acferrer
 */
-
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+#include <iostream>
+#include <set>
+#include <stack>
+#include <queue>
+#include <algorithm>
+#include <vector>
+#include <unordered_map>
 
 using namespace std;
 typedef long long ll;
@@ -10,36 +16,26 @@ typedef vector <ll> vll;
 typedef vector<int> vi;
 typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
+#define endl "\n";
 
 void solve(){
   int n;
   cin >> n;
   vi a(n);
-  for (int &i :a){
-    cin >> i;
-  }
-  ll odd = 0;
-  ll even = 0;
-  bool allneg = true;
- 
+  vi b(n);
   for (int i = 0; i < n; i++){
-    if (a[i] > 0) allneg= false;
-    if (i % 2 == 0){
-      even += max(a[i], 0);
+    cin >> a[i];
+  }
+  for (int i = 0; i < n; i++){
+    cin >> b[i];
+  }
+  int total = 1;
+  for (int i = 0; i < n; i++){
+    if (a[i] > b[i]){
+      total += a[i] - b[i];
     }
-    else{
-      odd += max(a[i], 0);
-    }
   }
-  if (allneg){
-    int mx = *max_element(a.begin(), a.end());
-    cout << mx << endl;
-  }
-
-  else{
-    cout << max(odd, even) << endl;
-  }
-
+  cout << total << endl;  
 
 }
 
@@ -51,6 +47,6 @@ int main(){
   while(t--){
    solve();
   }
-
+  //solve();
 
 }

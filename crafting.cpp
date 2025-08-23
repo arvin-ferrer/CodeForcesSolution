@@ -15,32 +15,33 @@ void solve(){
   int n;
   cin >> n;
   vi a(n);
-  for (int &i :a){
-    cin >> i;
-  }
-  ll odd = 0;
-  ll even = 0;
-  bool allneg = true;
- 
+  vi b(n);
+  for (int &i : a) cin >> i;
+  for (int &i : b) cin >> i;
+  int count = 0;
+  int diff = 0;
   for (int i = 0; i < n; i++){
-    if (a[i] > 0) allneg= false;
-    if (i % 2 == 0){
-      even += max(a[i], 0);
-    }
-    else{
-      odd += max(a[i], 0);
+    if (a[i] < b[i]){
+      count++;
+      diff = b[i]-a[i];
     }
   }
-  if (allneg){
-    int mx = *max_element(a.begin(), a.end());
-    cout << mx << endl;
-  }
-
+  if (count >= 2) cout << "NO\n";
   else{
-    cout << max(odd, even) << endl;
+    bool good = true;
+    for (int i = 0; i < n; i++){
+      if (abs(a[i]-b[i]) < diff){
+        good = false;
+      }
+    }
+    // 1 1 3
+    // 2 2 1
+    if (good){
+      cout << "YES\n";
+      return;
+    }
+    else cout << "NO\n";
   }
-
-
 }
 
 int main(){
@@ -51,6 +52,6 @@ int main(){
   while(t--){
    solve();
   }
-
+  //solve();
 
 }

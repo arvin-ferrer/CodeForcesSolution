@@ -12,12 +12,21 @@ typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
-  //FFT or NTT
-  string s;
-  cin >> s;
-  sort(s.begin(), s.end(), greater<>());
-  //TTTNFFFF
-  cout << s << endl;
+  int n;
+  cin >> n;
+  vi a(n);
+  for (int &i: a) cin >> i;
+  bool ok = true; 
+  int mn = INT_MAX;
+  for (int i = 0; i < n; i++){
+    // int mn = *min_element(a.begin(), a.begin()+i);
+    mn = min(a[i], mn);
+    if (a[i]-mn >= mn){
+      ok = false;
+    }
+  }
+  if (ok) cout << "YES\n";
+  else cout << "NO\n";
 }
 
 int main(){
@@ -28,6 +37,6 @@ int main(){
   while(t--){
    solve();
   }
-
+  //solve();
 
 }
