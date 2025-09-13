@@ -46,7 +46,7 @@ void solve() {
     } else {
         cout << max(n - left - 1, right) << endl;
     }
-
+//test
 }
 
 int main() {
