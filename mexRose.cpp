@@ -22,17 +22,9 @@ typedef set<int> si;
 typedef set<ll> sl;
 
 void solve(){
-  int x, n;
-  cin >> x >> n;
+  int n, k;
+  cin >> n >> k;
   
-  if (n % 2 == 0){
-    cout << 0 << endl;
-  }
-  else{
-    cout << x << endl;
-  }
-
-
 }
 
 int main(){
