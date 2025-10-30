@@ -12,6 +12,8 @@ typedef unordered_map<int, int> u_map;
 typedef unordered_map<ll, ll> ll_map;
 
 void solve(){
+  
+  //test
   string s;
   int k;
   cin >> s >> k;
